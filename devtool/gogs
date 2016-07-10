@@ -1,0 +1,20 @@
+==INSTALL MYSQL==
+ reference: http://jingyan.baidu.com/article/acf728fd10c3d6f8e510a3ef.html
+ 1004   yum install mysql
+ 1009   yum install mysql
+ 1010   yum install mysql-server
+ 1011   yum install mysql-devel
+
+grant all privileges on gogs.* to gogs@"gpu001.soniu.com" identified by "123456" ;
+create database gogs;
+flush privileges ;
+service mysqld restart
+
+==关闭防火墙==
+service iptables stop
+
+==INSTALL GOGS==
+wget https://dl.gogs.io/gogs_v0.9.13_linux_amd64.zip
+解压压缩包。
+使用命令 cd 进入到刚刚创建的目录。
+执行命令 ./gogs web，然后，就没有然后了。
