@@ -18,3 +18,40 @@ wget https://dl.gogs.io/gogs_v0.9.13_linux_amd64.zip
 解压压缩包。
 使用命令 cd 进入到刚刚创建的目录。
 执行命令 ./gogs web，然后，就没有然后了。
+
+
+==如何创建自己的项目==
+1. 登录 xxx:3000/
+2. 新建用户
+3. 登录创建项目user
+4. vim ~/.gitconfig
+5. 添加内容
+[user]
+    name = user
+    email = user@qq.com
+[remote "origin"]
+fetch = +refs/heads/*:refs/remotes/origin/*
+url = http://user:123456@xxx:3000/user/hello.git
+6. 初始化项目
+
+
+touch README.md
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin http://xxx:3000/user/hello.git
+git push -u origin master
+
+
+7. 后续的常用的命令
+ 1206  mkdir src
+ 1207  cd src/
+ 1208  vi t.py
+ 1209  python t.py
+ 1210  cd ../
+ 1212  git add src/
+ 1213  git commit -m "add src"
+ 1214  git push -u origin master
+ 参考 http://xxx:3000/user/hello.git
+
+
