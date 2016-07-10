@@ -5,7 +5,7 @@
  1010   yum install mysql-server
  1011   yum install mysql-devel
 
-grant all privileges on gogs.* to gogs@"gpu001.soniu.com" identified by "123456" ;
+grant all privileges on gogs.* to gogs@"XXX" identified by "123456" ;
 create database gogs;
 flush privileges ;
 service mysqld restart
