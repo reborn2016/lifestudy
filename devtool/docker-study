@@ -1,0 +1,11 @@
+##install
+https://docs.docker.com/docker-for-mac/
+docker run -d -p 80:80 --name webserver nginx
+docker ps
+docker-compose
+docker-machine
+
+##docker 用到的操作系统的功能
+1. device-mapper 操作系统设备虚拟
+2. c-group, 命名空间
+3. ufw 防火墙
